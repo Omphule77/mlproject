@@ -2,8 +2,8 @@ import os
 import sys
 from dataclasses import dataclass
 
-from catboost import CatBoostRegressor
-from xgboost import XGBRegressor
+#from catboost import CatBoostRegressor
+#from xgboost import XGBRegressor
 from sklearn.ensemble import (
     AdaBoostRegressor,
     GradientBoostingRegressor,
@@ -74,7 +74,7 @@ class ModelTrainer:
                     # 'weights':['uniform','distance'],
                     # 'algorithm':['ball_tree','kd_tree','brute']
                 },
-                "XGBoost Regressor":{
+            ''' "XGBoost Regressor":{
                     'learning_rate':[.1,.01,.05,.001],
                     'n_estimators': [8,16,32,64,128,256]
                 },
@@ -82,7 +82,7 @@ class ModelTrainer:
                     'depth': [6,8,10],
                     # 'learning_rate': [0.01, 0.05, 0.1],
                     'iterations': [30, 50, 100]
-                },
+                }, '''
                 "AdaBoost Regressor":{
                     'learning_rate':[.1,.01,0.5,.001],
                     # 'loss':['linear','square','exponential'],
